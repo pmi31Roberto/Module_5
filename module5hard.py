@@ -9,6 +9,7 @@ class User:
 # Атрибуты: title(заголовок, строка), duration(продолжительность, секунды), time_now(секунда остановки (изначально 0)),
 # adult_mode(ограничение по возрасту, bool (False по умолчанию))
 class Video:
+
     def __init__(self, title, duration, adult_made=False, time_now=0):
         self.title = title
         self.duration = duration
@@ -18,12 +19,12 @@ class Video:
 
 # Атрибуты: users(список объектов User), videos(список объектов Video), current_user(текущий пользователь, User)
 class UrTube:
+
     def __init__(self, users, videos, current_user):
-        self.users = users
-        self.videos = videos
-        self.current_user = current_user
+        pass
 
     def log_in(self, password, nickname):
+        # if (password and nickname) in users:
         pass
 
     def register(self, nickname, password, age):
