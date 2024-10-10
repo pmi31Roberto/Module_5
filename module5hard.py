@@ -87,10 +87,10 @@ class UrTube:
                 if i.adult_mode and self.current_user.age < 18:
                     print("Вам нет 18 лет, пожалуйста покиньте страницу")
                     return
-                for j in range(i.time_now, i.duration + 1):
+                for j in range(i.time_now, i.duration):
                     print(j, end=' ')
-                    time.sleep(0.01)
-                    if j == i.duration:
+                    time.sleep(1)
+                    if j == i.duration - 1:
                         print('Конец видео')
         if not flag:
             print(f'Видео {movie_title} не найдено')
